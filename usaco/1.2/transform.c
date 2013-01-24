@@ -52,8 +52,8 @@ void print(int n)
 
 int main()
 {
-	FILE *fin  = fopen ("transform.in", "r");
-	FILE *fout = fopen ("transform.out", "w");
+    FILE *fin  = fopen ("transform.in", "r");
+    FILE *fout = fopen ("transform.out", "w");
 
     int n,i,j;
 
@@ -118,6 +118,9 @@ int main()
     }
 
     fprintf (fout, "7\n");
+
+    fclose (fin);
+    fclose (fout);
 
     return 0;
 }

@@ -14,8 +14,8 @@ int main()
 	char in[100];
 	char *p;
 
-	FILE *fin  = fopen ("ride.in", "r");
-	FILE *fout = fopen ("ride.out", "w");
+    FILE *fin  = fopen ("ride.in", "r");
+    FILE *fout = fopen ("ride.out", "w");
 
 	fscanf (fin, "%s", in);	/* the two input integers */
 
@@ -38,6 +38,9 @@ int main()
 	if (g_r == c_r)
 		fprintf (fout, "%s", "GO\n");
 	else fprintf (fout, "%s", "STAY\n");
+
+    fclose (fin);
+    fclose (fout);
 
 	return 0;
 }

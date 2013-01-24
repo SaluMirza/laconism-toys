@@ -57,5 +57,8 @@ int main()
 
     fprintf (fout, "%d\n",s);
 
+    fclose (fin);
+    fclose (fout);
+
     return 0;
 }

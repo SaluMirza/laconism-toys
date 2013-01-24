@@ -13,5 +13,8 @@ int main()
     FILE *fin  = fopen ("calfflac.in", "r");
     FILE *fout = fopen ("calfflac.out", "w");
 
+    fclose (fin);
+    fclose (fout);
+
     return 0;
 }

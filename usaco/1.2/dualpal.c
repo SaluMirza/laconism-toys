@@ -81,5 +81,8 @@ int main()
         i++;
     }
 
+    fclose (fin);
+    fclose (fout);
+
     return 0;
 }

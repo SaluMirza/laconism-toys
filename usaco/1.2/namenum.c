@@ -79,5 +79,9 @@ int main()
         fprintf (fout, "%s\n", (char *)&result[i]);
     }
 
+    fclose (dict);
+    fclose (fin);
+    fclose (fout);
+
     return 0;
 }

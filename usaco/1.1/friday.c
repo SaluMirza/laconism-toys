@@ -69,6 +69,9 @@ int main()
     }
     fprintf (fout, "%d %d %d %d %d %d %d\n", times[5], times[6], times[0], times[1], times[2], times[3], times[4]);
 
+    fclose (fin);
+    fclose (fout);
+
     return 0;
 }
 

@@ -100,5 +100,8 @@ int main()
         }
     }
 
+    fclose (fin);
+    fclose (fout);
+
     return 0;
 }

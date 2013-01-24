@@ -16,8 +16,8 @@ int main()
 {
 	struct person p[11];
 
-	FILE *fin  = fopen ("gift1.in", "r");
-	FILE *fout = fopen ("gift1.out", "w");
+    FILE *fin  = fopen ("gift1.in", "r");
+    FILE *fout = fopen ("gift1.out", "w");
 
 	int n,i,j,friendi,give,count;
 	int num;
@@ -60,6 +60,9 @@ int main()
 	{
 		fprintf(fout, "%s %d\n", p[i].name, p[i].money);
 	}
+
+    fclose (fin);
+    fclose (fout);
 
 	return 0;
 }

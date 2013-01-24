@@ -22,8 +22,8 @@ int comp(const void *a, const void *b)
 
 int main()
 {
-	FILE *fin  = fopen ("milk2.in", "r");
-	FILE *fout = fopen ("milk2.out", "w");
+    FILE *fin  = fopen ("milk2.in", "r");
+    FILE *fout = fopen ("milk2.out", "w");
 
     int n,i,last_max = 0, idle_max = 0;
     struct time last;
@@ -77,6 +77,9 @@ int main()
     }
 
     fprintf (fout, "%d %d\n", last_max, idle_max);
+
+    fclose (fin);
+    fclose (fout);
     
 	return 0;
 }
