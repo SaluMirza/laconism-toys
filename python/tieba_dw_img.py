@@ -10,6 +10,8 @@ import urllib.request
 
 tieba_name = "c语言"
 work_dir = os.getcwd()
+album_count = 0
+img_count = 0
 
 # fetch album entries
 tieba_name = urllib.parse.quote_plus(tieba_name,encoding='gbk')
@@ -40,7 +42,7 @@ for album in album_entries:
     os.makedirs(cur_dir)
     next_page = album["href"]
     while (cur_page != next_page):
-        print ("%s\n" % next_page)
+        print ("%s" % next_page)
         page = urllib.request.urlopen(next_page)
         cur_page = next_page
         soup = BeautifulSoup(page.read())
@@ -59,4 +61,9 @@ for album in album_entries:
         file_tmp.write(img_dld)
         file_tmp.close()
     page_num = 2
+    album_count += 1
+    img_count += len(img_set)
+    print ("%s download complete, totally %d albums, %d images" % (urllib.parse.unquote_plus(album["name"],encoding='gbk'),album_count,len(img_set)))
     img_set.clear()
+
+print ("download complete, totally %d albums, %d images")
