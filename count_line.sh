@@ -3,8 +3,7 @@
 
 count_file_type=".+\.(c|h|s|S)$"
 count_sum=0
-if [$# = 0]
-then
+if test $# = 0;then
     work_pwd=$(pwd)
 else
     work_pwd=$1
