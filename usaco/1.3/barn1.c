@@ -11,13 +11,9 @@ TASK: test
 int cmp (const void *a, const void *b)
 {
     if (*(int *)a > *(int *)b)
-    {
         return 1;
-    }
     else
-    {
         return -1;
-    }
 }
 
 int main()
@@ -32,9 +28,7 @@ int main()
 
     fscanf (fin, "%d%d%d", &m,&s,&c);
     for (i = 0; i < c; i++)
-    {
         fscanf (fin, "%d", &stall[i]);
-    }
 
     qsort(stall,c,sizeof(int),cmp);
 
@@ -42,9 +36,7 @@ int main()
     s -= stall[0] - 1;
 
     for (i = 1; i < c; i++)
-    {
         length[i-1] = stall[i] - stall[i-1]-1;
-    }
 
     qsort(length,c-1,sizeof(int),cmp);
 
